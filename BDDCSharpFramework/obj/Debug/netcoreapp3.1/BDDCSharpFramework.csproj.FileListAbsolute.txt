@@ -1,0 +1,14 @@
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\bin\Debug\netcoreapp3.1\nunit.engine.dll
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\bin\Debug\netcoreapp3.1\nunit.engine.core.dll
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\bin\Debug\netcoreapp3.1\BDDCSharpFramework.deps.json
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\bin\Debug\netcoreapp3.1\BDDCSharpFramework.dll
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\bin\Debug\netcoreapp3.1\BDDCSharpFramework.pdb
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\obj\Debug\netcoreapp3.1\BDDCSharpFramework.AssemblyInfoInputs.cache
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\obj\Debug\netcoreapp3.1\BDDCSharpFramework.AssemblyInfo.cs
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\obj\Debug\netcoreapp3.1\BDDCSharpFramework.csproj.CoreCompileInputs.cache
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\obj\Debug\netcoreapp3.1\BDDCSharpFramework.dll
+C:\Users\mikog\source\repos\BDDCSharpFramework\BDDCSharpFramework\obj\Debug\netcoreapp3.1\BDDCSharpFramework.pdb
