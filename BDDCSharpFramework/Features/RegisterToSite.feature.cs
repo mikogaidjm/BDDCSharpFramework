@@ -73,58 +73,28 @@ namespace BDDCSharpFramework.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User opens the website")]
-        [NUnit.Framework.CategoryAttribute("initialize")]
-        public virtual void UserOpensTheWebsite()
+        public virtual void FeatureBackground()
         {
-            string[] tagsOfScenario = new string[] {
-                    "initialize"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User opens the website", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 4
+#line hidden
 #line 5
-this.ScenarioInitialize(scenarioInfo);
+ testRunner.Given("that Chrome is the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
 #line 6
- testRunner.Given("that \'Chrome\' is the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.And("I access this link: https://parabank.parasoft.com/parabank/index.htm", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 7
- testRunner.When("I access this link: \'https://parabank.parasoft.com/parabank/index.htm\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 8
- testRunner.Then("the page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Someone tries to register")]
+        [NUnit.Framework.DescriptionAttribute("(1) Someone tries to register")]
         [NUnit.Framework.CategoryAttribute("register")]
-        public virtual void SomeoneTriesToRegister()
+        public virtual void _1SomeoneTriesToRegister()
         {
             string[] tagsOfScenario = new string[] {
                     "register"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Someone tries to register", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 11
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("(1) Someone tries to register", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -144,8 +114,56 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 12
- testRunner.Given("that I click \'Register\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 4
+this.FeatureBackground();
+#line hidden
+#line 10
+ testRunner.Given("that someone clicks the Register link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FieldName",
+                            "FieldValue"});
+                table1.AddRow(new string[] {
+                            "customer.firstName",
+                            "Chip"});
+                table1.AddRow(new string[] {
+                            "customer.lastName",
+                            "Dale"});
+                table1.AddRow(new string[] {
+                            "customer.address.street",
+                            "3142  Doctors Drive"});
+                table1.AddRow(new string[] {
+                            "customer.address.city",
+                            "Los Angeles"});
+                table1.AddRow(new string[] {
+                            "customer.address.state",
+                            "CA"});
+                table1.AddRow(new string[] {
+                            "customer.address.zipCode",
+                            "90017"});
+                table1.AddRow(new string[] {
+                            "customer.phoneNumber",
+                            "310-341-3324"});
+                table1.AddRow(new string[] {
+                            "customer.ssn",
+                            "547-47-4914"});
+                table1.AddRow(new string[] {
+                            "customer.username",
+                            "chippendale"});
+                table1.AddRow(new string[] {
+                            "customer.password",
+                            "Test@123"});
+                table1.AddRow(new string[] {
+                            "repeatedPassword",
+                            "Test@123"});
+#line 11
+ testRunner.And("someone sets the following fields", ((string)(null)), table1, "And ");
+#line hidden
+#line 24
+ testRunner.When("the Register button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 25
+ testRunner.Then("the welcome page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -13,7 +13,7 @@ namespace BDDCSharpFramework.Step_Definitions
     public class InitializeTest
     {
 
-        [Given(@"that '(.*)' is the browser")]
+        [Given(@"that (.*) is the browser")]
         public void GivenThatSomethingIsTheBrowser(string browser)
         {
             switch (browser)
@@ -31,8 +31,8 @@ namespace BDDCSharpFramework.Step_Definitions
             Console.WriteLine("I am using " + browser + ".");
         }
 
-        [When(@"I access this link: '(.*)'")]
-        public void WhenIAccessThisLink(string link)
+        [Given(@"I access this link: (.*)")]
+        public void GivenIAccessThisLink(string link)
         {
             Utils.WebDriver.driver.Url = link;
             Console.WriteLine("I am accessing " + link + ".");
