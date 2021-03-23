@@ -11,6 +11,8 @@ namespace BDDCSharpFramework.Step_Definitions
     [Binding]
     public class Register
     {
+        private Credentials registerInfo = new Credentials();
+
         [Given(@"that someone clicks the (.*) link")]
         public void GivenThatSomeoneClicksALink (string link)
         {
@@ -40,6 +42,13 @@ namespace BDDCSharpFramework.Step_Definitions
                 else
                 {
                     givenElement.SendKeys(element.FieldValue);
+                    if (element.FieldName.Contains("username"))
+                    {
+                        registerInfo.Username = element.FieldValue;
+                    } else if(element.FieldName.Contains("password"))
+                    {
+                        registerInfo.Password = element.FieldValue;
+                    }
                     Console.WriteLine(element.FieldName + " field is set to " + element.FieldValue + ".");
                 }
             }         
@@ -63,7 +72,14 @@ namespace BDDCSharpFramework.Step_Definitions
         [Then(@"the welcome page should be displayed")]
         public void ThenTheWelcomePageShouldBeDisplayed()
         {
-            Console.WriteLine("The welcome page is displayed.");
+            IWebElement givenElement = Utils.WebDriver.driver.FindElement(By.XPath("//h1[contains(text(),'Welcome "+ registerInfo.Username +"')]"));
+            if (givenElement == null)
+            {
+                Console.WriteLine("The welcome page is not displayed.");
+            } else
+            {
+                Console.WriteLine("The welcome page is displayed.");
+            }
         }
     }
 }

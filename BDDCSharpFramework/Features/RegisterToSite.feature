@@ -1,9 +1,5 @@
-﻿Feature: ParaBank
-	Simple calculator for adding two numbers
-
-Background:
-	Given that Chrome is the browser
-	And I access this link: https://parabank.parasoft.com/parabank/index.htm
+﻿Feature: ParaBank Registration
+	It registers a user to ParaBank
 
 @register
 Scenario: (1) Someone tries to register

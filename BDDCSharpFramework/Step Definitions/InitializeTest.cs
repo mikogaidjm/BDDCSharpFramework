@@ -12,36 +12,21 @@ namespace BDDCSharpFramework.Step_Definitions
     [Binding]
     public class InitializeTest
     {
-
-        [Given(@"that (.*) is the browser")]
-        public void GivenThatSomethingIsTheBrowser(string browser)
+        [Given(@"I log in with (.*) and (.*)")]
+        public void GivenILogInWithUsernameAndPassword(string username, string password)
         {
-            switch (browser)
+            IWebElement userName = Utils.WebDriver.driver.FindElement(By.XPath("//input[contains(@name, 'username')]"));
+            IWebElement passWord = Utils.WebDriver.driver.FindElement(By.XPath("//input[contains(@name, 'password')]"));
+            if (userName == null || passWord == null )
             {
-                case "Chrome":
-                    Utils.WebDriver.driver = new ChromeDriver();
-                    break;
-                case "Firefox":
-                    Utils.WebDriver.driver = new FirefoxDriver();
-                    break;
-                case "Edge":
-                    Utils.WebDriver.driver = new EdgeDriver();
-                    break;
+                Console.WriteLine("Log-in element not found.");
+            } else
+            {
+                userName.SendKeys(username);
+                passWord.SendKeys(password);
+                Console.WriteLine(username+" and "+password+" inputted.");
             }
-            Console.WriteLine("I am using " + browser + ".");
         }
 
-        [Given(@"I access this link: (.*)")]
-        public void GivenIAccessThisLink(string link)
-        {
-            Utils.WebDriver.driver.Url = link;
-            Console.WriteLine("I am accessing " + link + ".");
-        }
-
-        [Then(@"the page should be displayed")]
-        public void ThenThePageShouldBeDisplayed()
-        {
-            Console.WriteLine("The page is displayed.");
-        }
     }
 }
