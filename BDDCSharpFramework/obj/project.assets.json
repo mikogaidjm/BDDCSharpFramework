@@ -696,6 +696,18 @@
           }
         }
       },
+      "Selenium.Support/3.141.0": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.141.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {}
+        }
+      },
       "Selenium.WebDriver/3.141.0": {
         "type": "package",
         "dependencies": {
@@ -3196,6 +3208,25 @@
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
+      ]
+    },
+    "Selenium.Support/3.141.0": {
+      "sha512": "F4sxMCXGyqWtbw5qsniJRgza2UsBnslHwFgNA2p7hPxvJhqg73lyXu/ZscJ7FSfRvq3eJrosysv92+4sZ3vWsg==",
+      "type": "package",
+      "path": "selenium.support/3.141.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/WebDriver.Support.dll",
+        "lib/net35/WebDriver.Support.xml",
+        "lib/net40/WebDriver.Support.dll",
+        "lib/net40/WebDriver.Support.xml",
+        "lib/net45/WebDriver.Support.dll",
+        "lib/net45/WebDriver.Support.xml",
+        "lib/netstandard2.0/WebDriver.Support.dll",
+        "lib/netstandard2.0/WebDriver.Support.xml",
+        "selenium.support.3.141.0.nupkg.sha512",
+        "selenium.support.nuspec"
       ]
     },
     "Selenium.WebDriver/3.141.0": {
@@ -7099,6 +7130,7 @@
       "Microsoft.NET.Test.Sdk >= 16.9.1",
       "NUnit >= 3.13.1",
       "NUnit3TestAdapter >= 3.17.0",
+      "Selenium.Support >= 3.141.0",
       "Selenium.WebDriver >= 3.141.0",
       "Selenium.WebDriver.ChromeDriver >= 89.0.4389.2300",
       "Selenium.WebDriver.GeckoDriver >= 0.29.0",
@@ -7109,19 +7141,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mikog\\.nuget\\packages\\": {}
+    "C:\\Users\\UESR\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mikog\\source\\repos\\BDDCSharpFramework\\BDDCSharpFramework\\BDDCSharpFramework.csproj",
+      "projectUniqueName": "C:\\Users\\UESR\\Documents\\C#_Files\\BDDCSharpFramework\\BDDCSharpFramework\\BDDCSharpFramework.csproj",
       "projectName": "BDDCSharpFramework",
-      "projectPath": "C:\\Users\\mikog\\source\\repos\\BDDCSharpFramework\\BDDCSharpFramework\\BDDCSharpFramework.csproj",
-      "packagesPath": "C:\\Users\\mikog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mikog\\source\\repos\\BDDCSharpFramework\\BDDCSharpFramework\\obj\\",
+      "projectPath": "C:\\Users\\UESR\\Documents\\C#_Files\\BDDCSharpFramework\\BDDCSharpFramework\\BDDCSharpFramework.csproj",
+      "packagesPath": "C:\\Users\\UESR\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\UESR\\Documents\\C#_Files\\BDDCSharpFramework\\BDDCSharpFramework\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mikog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\UESR\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7158,6 +7194,10 @@
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[3.17.0, )"
+          },
+          "Selenium.Support": {
+            "target": "Package",
+            "version": "[3.141.0, )"
           },
           "Selenium.WebDriver": {
             "target": "Package",

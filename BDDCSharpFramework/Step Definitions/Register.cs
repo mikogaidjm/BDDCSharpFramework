@@ -13,20 +13,6 @@ namespace BDDCSharpFramework.Step_Definitions
     {
         private Credentials registerInfo = new Credentials();
 
-        [Given(@"that someone clicks the (.*) link")]
-        public void GivenThatSomeoneClicksALink (string link)
-        {
-            IWebElement givenLink = Utils.WebDriver.driver.FindElement(By.XPath("//a[contains(text(),'"+link+"')]"));
-           if (givenLink == null)
-            {
-                Console.WriteLine(link + " link cannot be found.");
-            } else
-            {
-                givenLink.Click();
-                Console.WriteLine(link + " link is clicked.");
-            }
-        }
-
         [Given(@"someone sets the following fields")]
         public void GivenSomeoneSetsTheFollowingFields(Table given)
         {
@@ -54,29 +40,15 @@ namespace BDDCSharpFramework.Step_Definitions
             }         
         }
 
-        [When(@"the (.*) button is clicked")]
-        public void WhenTheButtonIsClicked(string button)
-        {
-            IWebElement givenElement = Utils.WebDriver.driver.FindElement(By.XPath("//input[contains(@value, '"+ button +"')]"));
-            if (givenElement == null)
-            {
-                Console.WriteLine(button + " button cannot be found.");
-            }
-            else
-            {
-                givenElement.Click();
-                Console.WriteLine(button + " button is clicked.");
-            }
-        }
-
         [Then(@"the welcome page should be displayed")]
         public void ThenTheWelcomePageShouldBeDisplayed()
         {
-            IWebElement givenElement = Utils.WebDriver.driver.FindElement(By.XPath("//h1[contains(text(),'Welcome "+ registerInfo.Username +"')]"));
+            IWebElement givenElement = Utils.WebDriver.driver.FindElement(By.XPath("//h1[contains(text(),'Welcome " + registerInfo.Username + "')]"));
             if (givenElement == null)
             {
                 Console.WriteLine("The welcome page is not displayed.");
-            } else
+            }
+            else
             {
                 Console.WriteLine("The welcome page is displayed.");
             }

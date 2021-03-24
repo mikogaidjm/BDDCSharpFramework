@@ -20,22 +20,22 @@ namespace BDDCSharpFramework.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.7.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ParaBank Registration")]
-    public partial class ParaBankRegistrationFeature
+    [NUnit.Framework.DescriptionAttribute("AccountChecking")]
+    public partial class AccountCheckingFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "RegisterToSite.feature"
+#line 1 "AccountChecking.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "ParaBank Registration", "\tIt registers a user to ParaBank", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "AccountChecking", "\tIt allows a user to check his/her bank account", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -73,16 +73,26 @@ namespace BDDCSharpFramework.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("(1) Someone tries to register")]
-        [NUnit.Framework.CategoryAttribute("register")]
-        public virtual void _1SomeoneTriesToRegister()
+        public virtual void FeatureBackground()
         {
-            string[] tagsOfScenario = new string[] {
-                    "register"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("(1) Someone tries to register", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 4
+#line hidden
 #line 5
+ testRunner.Given("I log in with chippendale and Test@123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 6
+ testRunner.When("the Log In button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Go to Account Overview")]
+        public virtual void GoToAccountOverview()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Go to Account Overview", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -102,53 +112,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 6
- testRunner.Given("that someone clicks the Register link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 4
+this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "FieldName",
-                            "FieldValue"});
-                table1.AddRow(new string[] {
-                            "customer.firstName",
-                            "Chip"});
-                table1.AddRow(new string[] {
-                            "customer.lastName",
-                            "Dale"});
-                table1.AddRow(new string[] {
-                            "customer.address.street",
-                            "3142  Doctors Drive"});
-                table1.AddRow(new string[] {
-                            "customer.address.city",
-                            "Los Angeles"});
-                table1.AddRow(new string[] {
-                            "customer.address.state",
-                            "CA"});
-                table1.AddRow(new string[] {
-                            "customer.address.zipCode",
-                            "90017"});
-                table1.AddRow(new string[] {
-                            "customer.phoneNumber",
-                            "310-341-3324"});
-                table1.AddRow(new string[] {
-                            "customer.ssn",
-                            "547-47-4914"});
-                table1.AddRow(new string[] {
-                            "customer.username",
-                            "chippendale"});
-                table1.AddRow(new string[] {
-                            "customer.password",
-                            "Test@123"});
-                table1.AddRow(new string[] {
-                            "repeatedPassword",
-                            "Test@123"});
-#line 7
- testRunner.And("someone sets the following fields", ((string)(null)), table1, "And ");
+#line 9
+ testRunner.Given("that someone clicks the 13455 link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 20
- testRunner.When("the Register button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
+ testRunner.When("the Account Details table is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 21
- testRunner.Then("the welcome page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
+ testRunner.Then("the accountType row value should be CHECKING", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 12
+ testRunner.And("the balance row value should be $515.50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

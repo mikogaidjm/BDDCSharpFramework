@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mikog\\source\\repos\\BDDCSharpFramework\\BDDCSharpFramework\\BDDCSharpFramework.csproj": {}
+    "C:\\Users\\UESR\\Documents\\C#_Files\\BDDCSharpFramework\\BDDCSharpFramework\\BDDCSharpFramework.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mikog\\source\\repos\\BDDCSharpFramework\\BDDCSharpFramework\\BDDCSharpFramework.csproj": {
+    "C:\\Users\\UESR\\Documents\\C#_Files\\BDDCSharpFramework\\BDDCSharpFramework\\BDDCSharpFramework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mikog\\source\\repos\\BDDCSharpFramework\\BDDCSharpFramework\\BDDCSharpFramework.csproj",
+        "projectUniqueName": "C:\\Users\\UESR\\Documents\\C#_Files\\BDDCSharpFramework\\BDDCSharpFramework\\BDDCSharpFramework.csproj",
         "projectName": "BDDCSharpFramework",
-        "projectPath": "C:\\Users\\mikog\\source\\repos\\BDDCSharpFramework\\BDDCSharpFramework\\BDDCSharpFramework.csproj",
-        "packagesPath": "C:\\Users\\mikog\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mikog\\source\\repos\\BDDCSharpFramework\\BDDCSharpFramework\\obj\\",
+        "projectPath": "C:\\Users\\UESR\\Documents\\C#_Files\\BDDCSharpFramework\\BDDCSharpFramework\\BDDCSharpFramework.csproj",
+        "packagesPath": "C:\\Users\\UESR\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\UESR\\Documents\\C#_Files\\BDDCSharpFramework\\BDDCSharpFramework\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mikog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\UESR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,6 +54,10 @@
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[3.17.0, )"
+            },
+            "Selenium.Support": {
+              "target": "Package",
+              "version": "[3.141.0, )"
             },
             "Selenium.WebDriver": {
               "target": "Package",

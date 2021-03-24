@@ -17,14 +17,15 @@ namespace BDDCSharpFramework.Step_Definitions
         {
             IWebElement userName = Utils.WebDriver.driver.FindElement(By.XPath("//input[contains(@name, 'username')]"));
             IWebElement passWord = Utils.WebDriver.driver.FindElement(By.XPath("//input[contains(@name, 'password')]"));
-            if (userName == null || passWord == null )
+            if (userName == null || passWord == null)
             {
                 Console.WriteLine("Log-in element not found.");
-            } else
+            }
+            else
             {
                 userName.SendKeys(username);
                 passWord.SendKeys(password);
-                Console.WriteLine(username+" and "+password+" inputted.");
+                Console.WriteLine(username + " and " + password + " inputted.");
             }
         }
 
